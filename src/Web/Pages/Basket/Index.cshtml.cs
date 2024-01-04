@@ -26,7 +26,9 @@ public class IndexModel : PageModel
 
     public async Task OnGet()
     {
+
         BasketModel = await _basketViewModelService.GetOrCreateBasketForUser(GetOrSetBasketCookieAndUserName());
+        throw new InvalidOperationException("This is a test exception");
     }
 
     public async Task<IActionResult> OnPost(CatalogItemViewModel productDetails)

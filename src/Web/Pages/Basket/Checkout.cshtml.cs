@@ -31,6 +31,7 @@ public class CheckoutModel : PageModel
         _orderService = orderService;
         _basketViewModelService = basketViewModelService;
         _logger = logger;
+        
     }
 
     public BasketViewModel BasketModel { get; set; } = new BasketViewModel();
